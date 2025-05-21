@@ -11,7 +11,7 @@ def number_pool_for_column(col)
   (lower..upper).to_a.shuffle
 end
 
-def random_housie
+def random_housie_ticket
   # 3×9 grid Initialization
   grid = Array.new(ROW) { Array.new(COLUMNS, "  ") }
 
@@ -64,7 +64,7 @@ end
 
 # Generate and print 1 ticket
 1.upto(1){
-  print_housie_ticket(random_housie)
+  print_housie_ticket(random_housie_ticket)
 }
 
 =begin 

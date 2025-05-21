@@ -2,7 +2,7 @@ require_relative "../housie_ticket"
 require "byebug"
 
 describe 'Housie Ticket Generator' do
-  let(:ticket) { random_housie }
+  let(:ticket) { random_housie_ticket }
 
   it 'has 3 rows and 9 columns' do
     expect(ticket.size).to eq(3)
