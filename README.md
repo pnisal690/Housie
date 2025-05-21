@@ -30,16 +30,6 @@ Each column has a specific range:
 
 ---
 
-## Housie Ticket Example
-
-|  5  |     | 21  | 30  |     | 51  |     |     | 80  |
-|-----|-----|-----|-----|-----|-----|-----|-----|-----|
-|  6  |     | 26  | 33  |     |     |     | 70  | 82  |
-|     | 11  | 28  | 38  |     | 52  |     |     | 85  |
-
-
----
-
 ## How to Use
 
 ### Requirements
@@ -49,4 +39,5 @@ Each column has a specific range:
 ### Run the Script
 
 ```bash
-ruby housie_ticket_generator.rb
+ruby housie_ticket.rb 
+```

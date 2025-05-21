@@ -37,7 +37,7 @@ def random_housie
   col_values = {}
   (0...COLUMNS).each do |col|
     count = row_slots.count { |r| r.include?(col) }
-    p col_values[col] = number_pool_for_column(col).take(count).sort
+    col_values[col] = number_pool_for_column(col).take(count).sort
   end
   
 
@@ -66,3 +66,12 @@ end
 1.upto(1){
   print_housie_ticket(random_housie)
 }
+
+=begin 
+output : 
+Housie Ticket:
+   | 13 | 23 |    | 40 |    |    | 74 | 88|
+ 2 | 14 |    | 37 |    | 53 | 61 |    |   |
+ 7 | 16 |    |    | 45 | 58 | 63 |    |   |
+
+=end
