@@ -26,9 +26,10 @@ def random_housie
     
     # Step 2: Count how many times each column is used
     col_count = all_cols.tally
+    used_columns = all_cols.uniq # max 3 per column, and all 9 columns used
     
-    # Step 3: Validate that no column is used more than 3 times
-    break if col_count.values.all? { |v| v <= 3 }
+    # Step 3: Validate that no column is used more than 3 times 
+    break if col_count.values.all? { |v| v <= 3 } && used_columns.size == COLUMNS
   end
   # puts row_slots
   
@@ -36,8 +37,9 @@ def random_housie
   col_values = {}
   (0...COLUMNS).each do |col|
     count = row_slots.count { |r| r.include?(col) }
-    col_values[col] = number_pool_for_column(col).take(count).sort
+    p col_values[col] = number_pool_for_column(col).take(count).sort
   end
+  
 
   # Step 5: Fill the grid
   (0...ROW).each do |r|
